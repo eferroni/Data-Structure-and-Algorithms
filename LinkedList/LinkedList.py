@@ -41,7 +41,7 @@ class LinkedList:
             self.tail = newNode
         else:
             self.tail.next = newNode
-            self.tail = newNode
+            self.tail = self.tail.next
         return self.tail
 
     def generate(self, n, min_value, max_value):
@@ -52,7 +52,8 @@ class LinkedList:
         return self
 
 
-customLL = LinkedList()
-customLL.generate(10, 0, 99)
-print(customLL)
-print(len(customLL))
+if __name__ == "__main__":
+    customLL = LinkedList()
+    customLL.generate(10, 0, 99)
+    print(customLL)
+    print(len(customLL))
